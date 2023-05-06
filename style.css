@@ -6,7 +6,7 @@
 header {
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
 
 body {
@@ -177,8 +177,9 @@ body {
     .header {
   position: relative;
   top: -20px;
-  width: 100%;
+  width: 120%;
   background-color: #011627;
+  text-align:center;
   color: #fdfffc;
 }
 .para{
