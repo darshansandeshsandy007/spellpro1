@@ -1,0 +1,202 @@
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Courier;
+    background-color: black;
+    color: goldenrod;
+}
+.css-typing p {
+    margin: 0;
+    padding: 0;
+    border-right: .15em solid orange;
+    font-family: "Courier";
+    font-size: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+    .css-typing p:nth-child(1) {
+        width: 63em;
+        margin-left: 2%;
+        margin-bottom: 5%;
+        -webkit-animation: type 2s steps(40, end);
+        animation: type 5s steps(40, end);
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+
+    .css-typing p:nth-child(2) {
+        width: 29em;
+        margin-bottom: 5%;
+        margin-left: 30%;
+        opacity: 0;
+        text-align: center;
+        -webkit-animation: type2 5s steps(40, end);
+        animation: type2 2s steps(40, end);
+        -webkit-animation-delay: 2s;
+        animation-delay: 5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+       
+
+    
+
+
+
+        @keyframes type {
+            0% {
+        width: 0;
+    }
+
+    99.9% {
+        border-right: 0em solid orange;
+    }
+
+    100% {
+        border: none;
+    }
+}
+
+@-webkit-keyframes type {
+    0% {
+        width: 0;
+    }
+
+    99.9% {
+        border-right: 0em solid orange;
+    }
+
+    100% {
+        border: none;
+    }
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    99.9% {
+        border-right: 0em solid orange;
+    }
+
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@-webkit-keyframes type2 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    99.9% {
+        border-right: 0em solid orange;
+    }
+
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes type3 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes type3 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: tranparent;
+    }
+}
+
+    .header {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  background-color: #011627;
+  color: #fdfffc;
+}
+.para{
+  font-family: Georgia, serif;
+  color: purple;
+font-size: 50px;
+text-align: center;
+}
+.header h2 {
+  padding: 0.5em;
+}
+button {
+    background-color: goldenrod; /* Set the background color */
+    color: black; /* Set the text color */
+    padding: 10px 20px; /* Add padding to the button */
+    border: 3px solid goldenrod;
+    border-radius: 20px ; /* Round the corners of the button */
+    font-size: 40px; /* Set the font size */
+    cursor: pointer; /* Change the cursor to a pointer */
+    display: block;
+    margin: 0 auto;
+}
+    button:hover {
+        background-color: white;
+        /* Change the background color on hover */
+    }
+
+
+h4 {
+  position: relative;
+  top: -5px;
+  padding: 8px;
+  width: 95%;
+  background-color: #0582ca;
+  align-self: center;
+  color: #fdfffc;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
