@@ -6,40 +6,56 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8">
     <title>SpellPro</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script>
-        function speak() {
-            var text = document.getElementById("text").value;
-            var utterance = new SpeechSynthesisUtterance(text);
-            speechSynthesis.speak(utterance);
+    <style>
+        .dropdown {
+            width: 50%;
+            background-color: black;
+            color: goldenrod;
+            position: relative;
         }
-    </script>
+
+        .content {
+            display: none;
+
+        } 
+        .dropdown:hover .content{
+            display: block;
+
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <h1 style="text-align:center">"BEFORE WE START THE GAME LET ME TELL U THE INTRODUCTIONS "</h1>
     </header>
-    <div class="css-typing1">
-        <p>1.Click on the generate button to say the word.</p>
-        <p>2.After hearing the word type the word in the your answer box.</p>
-        <p>3.If the answer is correct then you can repeat the process again.</p>
-        <p>4.If the answer is wrong type the answer again and try again.</p>
+    <div class="dropdown">
+        <h1>Read The Instructions</h1>
+        <p class="content" style="font-size:25px">
+            1.Click on the generate button to say the word.<br>
+            2.After hearing the word type the word in the your answer box.<br>
+            3.If the answer is wrong type the answer again and try again.<br >
+        </p>
     </div>
-    <button onclick="toggleText()">Show Text</button>
-    <p id="text">This text will be shown when the button is clicked.</p>
-
-    <script>
-        function toggleText() {
-            var text = document.getElementById("text");
-            if (text.style.display === "none") {
-                text.style.display = "block";
-            } else {
-                text.style.display = "none";
+    
+    <div>
+        <button onclick="toggleText()">Show Text</button>
+        <script>
+            function toggleText() {
+                var text = document.getElementById("text");
+                if (text.style.display === "none") {
+                    text.style.display = "block";
+                } else {
+                    text.style.display = "none";
+                }
             }
-        }
-    </script>
-    <textarea id="text"></textarea>
-    <button onclick="speak()">Speak</button>
+        </script>
+        <p id="text">This text will be shown when the button is clicked.</p>
+
+    </div>
+    
+    
 
 
 
