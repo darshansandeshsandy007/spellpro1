@@ -7,7 +7,13 @@
     <meta charset="UTF-8">
     <title>SpellPro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <script>
+        function speak() {
+            var text = document.getElementById("text").value;
+            var utterance = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(utterance);
+        }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -19,11 +25,22 @@
         <p>3.If the answer is correct then you can repeat the process again.</p>
         <p>4.If the answer is wrong type the answer again and try again.</p>
     </div>
-    <form>
-        <label for="fname">The word is </label><br>
-        <h1>{{ name }}!</h1>
-        
-    </form>
+    <button onclick="toggleText()">Show Text</button>
+    <p id="text">This text will be shown when the button is clicked.</p>
+
+    <script>
+        function toggleText() {
+            var text = document.getElementById("text");
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+    <textarea id="text"></textarea>
+    <button onclick="speak()">Speak</button>
+
 
 
 </body>
