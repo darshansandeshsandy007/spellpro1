@@ -36,27 +36,33 @@
         var msg;
         function generateRandomWord() {
             var words = [
-  "onomatopoeia",
-  "sesquipedalian",
-  "supercalifragilisticexpialidocious",
-  "xylophone",
-  "pneumonoultramicroscopicsilicovolcanoconiosis",
-  "antidisestablishmentarianism",
-  "floccinaucinihilipilification",
-  "sesquicentennial",
-  "honorificabilitudinitatibus",
-  "schadenfreude",
-  "phlegm",
-  "soliloquy",
-  "brouhaha",
-  "gobbledygook",
-  "serendipity",
-  "kerfuffle",
-  "epitome",
-  "paradigm",
-  "quintessential",
-  "ubiquitous"
-];
+                "apple",
+                "banana",
+                "cherry",
+                "dog",
+                "elephant",
+                "flower",
+                "guitar",
+                "hamburger",
+                "igloo",
+                "jacket",
+                "kangaroo",
+                "lemon",
+                "mountain",
+                "notebook",
+                "orange",
+                "penguin",
+                "quilt",
+                "rabbit",
+                "strawberry",
+                "turtle",
+                "umbrella",
+                "violin",
+                "watermelon",
+                "xylophone",
+                "yogurt",
+                "zebra"
+            ];
             var randomIndex = Math.floor(Math.random() * words.length);
             randomWord = words[randomIndex];
             msg = new SpeechSynthesisUtterance(randomWord);
