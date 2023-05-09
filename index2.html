@@ -35,7 +35,28 @@
         var randomWord;
         var msg;
         function generateRandomWord() {
-            var words = ["apple", "banana", "cherry", "orange", "pear"];
+            var words = [
+  "onomatopoeia",
+  "sesquipedalian",
+  "supercalifragilisticexpialidocious",
+  "xylophone",
+  "pneumonoultramicroscopicsilicovolcanoconiosis",
+  "antidisestablishmentarianism",
+  "floccinaucinihilipilification",
+  "sesquicentennial",
+  "honorificabilitudinitatibus",
+  "schadenfreude",
+  "phlegm",
+  "soliloquy",
+  "brouhaha",
+  "gobbledygook",
+  "serendipity",
+  "kerfuffle",
+  "epitome",
+  "paradigm",
+  "quintessential",
+  "ubiquitous"
+];
             var randomIndex = Math.floor(Math.random() * words.length);
             randomWord = words[randomIndex];
             msg = new SpeechSynthesisUtterance(randomWord);
@@ -64,7 +85,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <header class="header">
-        <h1 style="text-align:center">"BEFORE WE START THE GAME LET ME TELL U THE INTRODUCTIONS "</h1>
+        <h1 style="text-align:center">"SPELL PRO "</h1>
     </header>
     <h2>Click on the generate button to genertae the word.</h2>
     <div>
@@ -78,17 +99,20 @@
         </script>
     </div>
     <div style="font-size:50px">
-        <label for="user-word" style="margin-left:40%">Enter the word:</label>
-        <input type="text" id="user-word" name="user-word">
+        <label for="user-word" style="margin-left:30%">Enter the word:</label>
+        <input type="text" id="user-word" name="user-word" >
     </div>
     
     <div class="check" style="margin-top:5%">
         <button onclick="checkWord()" style="margin-bottom:5%">Check</button>
 
     </div>
+    <div style="font-size: 50px">
+        <button onclick="displayWord()" style="margin-bottom:5%" ;font-size:"50px">Show Spoken Word</button>
+        <p style="text-align:center">The spoken word is: <span id="spoken-word"></span></p>
+
+    </div>
     
-    <button onclick="displayWord()">Show Spoken Word</button>
-    <p style="text-align:center">The spoken word is: <span id="spoken-word"></span></p>
 
 </body>
 </html>
