@@ -210,6 +210,12 @@ button {
         background-color: white;
         /* Change the background color on hover */
     }
+footer {
+    background: goldenrod;
+    color: black;
+    text-align: center;
+    margin-bottom: -2px;
+}
 
 
 
