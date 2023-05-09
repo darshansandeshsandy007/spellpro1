@@ -9,6 +9,7 @@ header {
     padding: 10px;
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -203,14 +204,6 @@ button {
     }
 
 
-h4 {
-  position: relative;
-  top: -5px;
-  padding: 8px;
-  width: 95%;
-  background-color: #0582ca;
-  align-self: center;
-  color: #fdfffc;
-  text-align: center;
-  border-radius: 4px 4px 0 0;
-}
+
+
+
