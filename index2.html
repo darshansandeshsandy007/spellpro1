@@ -14,7 +14,8 @@
             color: goldenrod;
             position: relative;
         }
-        label{
+
+        label {
             margin-top: 10%;
             margin-bottom: 20%;
         }
@@ -26,10 +27,18 @@
         .dropdown:hover .content {
             display: block;
         }
+
         h2 {
             text-align: center;
             font-size: 50px;
         }
+        .score-card {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 50px;
+        }
+   
     </style>
     <script>
         var randomWord;
@@ -71,14 +80,29 @@
         function repeatSpokenWord() {
             window.speechSynthesis.speak(msg);
         }
+        let score = 0;
         function checkWord() {
             var userWord = document.getElementById("user-word").value;
             if (userWord === randomWord) {
                 alert("Congratulations! You guessed the word!");
+                score++;
             } else {
                 alert("Sorry, that's not the word. Try again!");
             }
             document.getElementById("user-word").value = "";
+        }
+        
+        const scoreElement = document.getElementById('score');
+
+        function displayScore() {
+            scoreElement.textContent = score;
+        }
+
+        
+
+        function resetScore() {
+            score = 0;
+            displayScore();
         }
 
     </script>
@@ -112,6 +136,11 @@
     <div class="check" style="margin-top:5%">
         <button onclick="checkWord()" style="margin-bottom:5%">Check</button>
 
+    </div>
+    <div class="score-card">
+        <h2>Score Card</h2>
+        <p>Score: <span id="score">0</span></p>
+        <button onclick="resetScore()" style="margin-bottom:5%">Reset Score</button>
     </div>
     <div style="font-size: 50px">
         <button onclick="displayWord()" style="margin-bottom:5%" ;font-size:"50px">Show Spoken Word</button>
