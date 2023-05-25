@@ -43,6 +43,7 @@
     <script>
         var randomWord;
         var msg;
+        let score = 0;
         function generateRandomWord() {
             var words = [
                 "apple",
@@ -80,23 +81,25 @@
         function repeatSpokenWord() {
             window.speechSynthesis.speak(msg);
         }
-        let score = 0;
+        
         function checkWord() {
             var userWord = document.getElementById("user-word").value;
             if (userWord === randomWord) {
                 alert("Congratulations! You guessed the word!");
-                score++;
+                score=score+1;
             } else {
                 alert("Sorry, that's not the word. Try again!");
             }
             document.getElementById("user-word").value = "";
+            const scoreElement = document.getElementById('score');
+
+            function displayScore() {
+                scoreElement.textContent = score;
+            }
+
         }
         
-        const scoreElement = document.getElementById('score');
-
-        function displayScore() {
-            scoreElement.textContent = score;
-        }
+        
 
         
 
@@ -137,11 +140,7 @@
         <button onclick="checkWord()" style="margin-bottom:5%">Check</button>
 
     </div>
-    <div class="score-card">
-        <h2>Score Card</h2>
-        <p>Score: <span id="score">0</span></p>
-        <button onclick="resetScore()" style="margin-bottom:5%">Reset Score</button>
-    </div>
+    
     <div style="font-size: 50px">
         <button onclick="displayWord()" style="margin-bottom:5%" ;font-size:"50px">Show Spoken Word</button>
         <p style="text-align:center">The spoken word is: <span id="spoken-word"></span></p>
